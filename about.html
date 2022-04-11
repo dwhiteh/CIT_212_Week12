@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            border: 1px solid #f1f1f1;
+            perspective: 1000px; /* Remove this if you don't want the 3D effect */
+        }
+
+        /* This container is needed to position the front and back side */
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        /* Do an horizontal flip when you move the mouse over the flip box container */
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* Position the front and back side */
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden; /* Safari */
+            backface-visibility: hidden;
+        }
+
+        /* Style the front side (fallback if image is missing) */
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        /* Style the back side */
+        .flip-card-back {
+            background-color: navy;
+            color: darkgoldenrod;
+            transform: rotateY(180deg);
+        }
+        .flip-card-back p {
+            text-align: left;
+            padding: 5px;
+
+
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+<header><h1>American Warships</h1></header>
+<nav class="bar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="">Contact</a>
+</nav>
+<div class = container>
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="carrier.jpg" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+            <h1>Aircraft Carrier</h1>
+            <p>All current US aircraft carriers are powered by nuclear propulsion.</p>
+            <p>The US currently has 11 commissioned aircraft carriers.</p>
+                <p>Each with the capability to handle approximately 80 aircraft.
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="destroyer.jpg" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+            <h1>Arleigh Burke Destroyer</h1>
+            <p>First commissioned on Independence Day 1991.</p>
+            <p>Capable of Anti-Air, Anti-Submarine, and Anti-Surface Warfare.</p>
+            <p>Holds a crew of over 300 personnel.</p>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="cruiser.jpg" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+            <h1>Ticonderoga Class Cruiser</h1>
+            <p>Last Cruiser commissioned in 1994, 27 built in total and still active. </p>
+            <p>CG-57 named after the Battle of Lake Champlain.</p>
+            <p>Homeport out of San Diego. I am proud to have served aboard her.</p>
+        </div>
+    </div>
+</div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="lcs.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+                <h1>Littoral Combat Ship</h1>
+                <p>Capable of speeds in excess of 40 knots.</p>
+                <p>Designed by Lockheed Martin to operate in near-shore environments.</p>
+                <p>Two different hull types named Freedom and Independent.</p>
+            </div>
+        </div>
+    </div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="zumwalt.jpg" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+            <h1>Zumwalt Class Destroyer</h1>
+            <p>Newest class of warship. Only three commissioned.</p>
+            <p>Significantly larger than Ticonderoga Cruisers and Arleigh Burke Destroyers.</p>
+            <p>Designed for stealth.</p>
+        </div>
+    </div>
+</div>
+</div>
+<footer>Copyright Dale Whitehead 2022</footer>
+</body>
+</html>
